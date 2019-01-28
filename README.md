@@ -1,7 +1,7 @@
 # CLINK-on-FPGA
 Compact LSTM inference kernel implementation based on Vivado HLS on FPGA.
 
-## Description
+## Brief Description
 
 The compact LSTM kernel is a one-hidden-layer 5-node LSTM newwork.
 
