@@ -13,7 +13,7 @@ The C simulation is based on the test bench of EEG sampling sequence, and the CL
 
 Both the C and the FPGA implementations of the LSTM kernel are in 16-bit fixed point.
 
-The Vivado HLS implementation of the kernel is time multiplexed by 16 slices, so that it can be shared among 16 input channels.
+The Vivado HLS kernel is time multiplexed by 16 slices, so that it can be shared among 16 input channels.
 
 ## Reference
 **Please cite this paper when you use CLINK on FPGA in your research. Thanks!**
