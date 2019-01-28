@@ -1,17 +1,17 @@
-# CLINK-on-FPGA
-Compact LSTM inference kernel implementation based on Vivado HLS on FPGA.
+# CLINK
+Compact LSTM inference kernel (CLINK) designed in C/HLS/RTL for FPGA and ASIC implementation.
 
 ## Brief Description
 
 The compact LSTM kernel is a one-hidden-layer 5-node LSTM network.
 
-It is designed to perform IIR filter approximation without acausal delay for the EEG signal processing.
+It is first designed to perform IIR filter approximation without acausal delay for the EEG signal processing.
 
 However, the idea and implementation can be extended for a variety of embedded real-time applications.
 
-The C simulation is based on the test bench of EEG sampling sequence, and the CLINK kernels implemented by RTL/Verilog and Vivado HLS for FPGA implementation have been verified to perform the same function.
+The C simulation is based on the test bench of EEG sampling sequence, and the CLINK kernels implemented by RTL/Verilog and Vivado HLS for ASIC/FPGA implementation have been verified to perform exactly the same function.
 
-Both the C and the FPGA implementations of the LSTM kernel are in 16-bit fixed point.
+Both the C and the RTL/HLS implementations of the LSTM kernel are in 16-bit fixed point.
 
 The Vivado HLS kernel is time multiplexed by 16 slices, so that it can be shared among 16 input channels.
 
