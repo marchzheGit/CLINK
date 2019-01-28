@@ -5,7 +5,7 @@ Compact LSTM inference kernel implementation based on Vivado HLS on FPGA.
 
 The compact LSTM kernel is a one-hidden-layer 5-node LSTM network.
 
-It is designed to perform IIR filter approximation for the EEG signal processing.
+It is designed to perform IIR filter approximation without acausal delay for the EEG signal processing.
 
 However, the idea and implementation can be extended for a variety of embedded real-time applications.
 
