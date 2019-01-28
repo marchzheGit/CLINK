@@ -1,5 +1,5 @@
 # CLINK-on-FPGA
-FPGA CLINK
+Compact LSTM inference kernel implementation based on Vivado HLS on FPGA.
 
 ## Reference
 **Please cite this paper when you use CNMF-E in your research. Thanks!**
