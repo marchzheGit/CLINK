@@ -18,4 +18,4 @@ The Vivado HLS kernel is time multiplexed by 16 slices, so that it can be shared
 ## Reference
 **Please cite this paper when you find CLINK useful in your research. Thanks!**
 
-Zhe Chen, Hugh T. Blair, Andrew Howe, Jason Cong. [CLINK: Compact LSTM Inference Kernel for Energy Efficient Neurofeedback Devices](https://vast.cs.ucla.edu/sites/default/files/publications/CLINK_ISLPED%202018%20publication.pdf). 2018 International Symposium on Low Power Electronics and Design, Seattle, WA, July 23-25, 2018.
+Zhe Chen, Hugh T. Blair, Andrew Howe, Jason Cong. [CLINK: Compact LSTM Inference Kernel for Energy Efficient Neurofeedback Devices](https://vast.cs.ucla.edu/sites/default/files/publications/CLINK_ISLPED%202018%20publication.pdf). International Symposium on Low Power Electronics and Design, Seattle, WA, July 23-25, 2018.
