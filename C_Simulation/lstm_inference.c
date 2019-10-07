@@ -312,13 +312,6 @@ void lstm_n5_o1(
 
     float outB = -0.0394433;
 
-    float h_state[5] = {0};
-    float c_state[5] = {0};
-    float i_state[5] = {0};
-    float f_state[5] = {0};
-    float o_state[5] = {0};
-    float g_state[5] = {0};
-
     short inWF[4][5] = {0};
     short intWF[4][5][5] = {0};
     short intBF[4][5] = {0};
@@ -328,7 +321,6 @@ void lstm_n5_o1(
     for (i = 0; i < 4; ++i) {
         for (j = 0; j < 5; ++j) {
             inWF[i][j] = (short) (inW[i][j] * SCALER);
-            //printf("%d\n", inWF[i][j]);
         }
     }
 
@@ -336,7 +328,6 @@ void lstm_n5_o1(
         for (j = 0; j < 5; ++j) {
             for (t = 0; t < 5; ++t) {
                 intWF[i][j][t] = (short) (intW[i][j][t] * SCALER);
-                //printf("%d\n", intWF[i][j][t]);
             }
         }
     }
@@ -344,17 +335,14 @@ void lstm_n5_o1(
     for (i = 0; i < 4; ++i) {
         for (j = 0; j < 5; ++j) {
             intBF[i][j] = (short) (intB[i][j] * SCALER);
-            //printf("%d\n", intBF[i][j]);
         }
     }
 
     for (i = 0; i < 5; ++i) {
         outWF[i] = (short) (outW[i] * SCALER);
-        //printf("%d\n", outWF[i]);
     }
 
     outBF = (short) (outB * SCALER);
-    //printf("%d\n", outBF);
 
     short h_stateF[5] = {0};
     short c_stateF[5] = {0};
@@ -500,13 +488,6 @@ void lstm_n5_o2(
 
     float outB = -0.0191289;
 
-    float h_state[5] = {0};
-    float c_state[5] = {0};
-    float i_state[5] = {0};
-    float f_state[5] = {0};
-    float o_state[5] = {0};
-    float g_state[5] = {0};
-
     short inWF[4][5] = {0};
     short intWF[4][5][5] = {0};
     short intBF[4][5] = {0};
@@ -516,7 +497,6 @@ void lstm_n5_o2(
     for (i = 0; i < 4; ++i) {
         for (j = 0; j < 5; ++j) {
             inWF[i][j] = (short) (inW[i][j] * SCALER);
-            //printf("%d\n", inWF[i][j]);
         }
     }
 
@@ -524,7 +504,6 @@ void lstm_n5_o2(
         for (j = 0; j < 5; ++j) {
             for (t = 0; t < 5; ++t) {
                 intWF[i][j][t] = (short) (intW[i][j][t] * SCALER);
-                //printf("%d\n", intWF[i][j][t]);
             }
         }
     }
@@ -532,17 +511,14 @@ void lstm_n5_o2(
     for (i = 0; i < 4; ++i) {
         for (j = 0; j < 5; ++j) {
             intBF[i][j] = (short) (intB[i][j] * SCALER);
-            //printf("%d\n", intBF[i][j]);
         }
     }
 
     for (i = 0; i < 5; ++i) {
         outWF[i] = (short) (outW[i] * SCALER);
-        //printf("%d\n", outWF[i]);
     }
 
     outBF = (short) (outB * SCALER);
-    //printf("%d\n", outBF);
 
     short h_stateF[5] = {0};
     short c_stateF[5] = {0};
