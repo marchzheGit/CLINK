@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="lstm_kernel.c" path="/curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/lstm_kernel.c"/>
+    <originFiles name="lstm_kernel.h" path="/curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/lstm_kernel.h"/>
+  </source>
+  <testbench>
+    <originFiles name="input.txt" path="/curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/input.txt"/>
+    <originFiles name="lstm_kernel_tb.c" path="/curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/lstm_kernel_tb.c"/>
+    <originFiles name="output.txt" path="/curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/output.txt"/>
+    <originFiles name="weight.txt" path="/curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/weight.txt"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

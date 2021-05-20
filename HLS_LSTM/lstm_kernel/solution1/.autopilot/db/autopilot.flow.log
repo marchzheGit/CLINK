@@ -1,0 +1,613 @@
+INFO-FLOW: Workspace /curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/lstm_kernel/solution1 opened at Fri Sep 06 17:03:21 PDT 2019
+Execute     config_clock -quiet -name default -period 2 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 2ns.
+Execute     config_clock -quiet -name default -uncertainty 0.25 -unit % 
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 0.25ns.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib /opt/tools/xilinx/Vivado/2019.1/common/technology/xilinx/zynquplus/zynquplus 
+Execute       source /opt/tools/xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.lib 
+Execute         source /opt/tools/xilinx/Vivado/2019.1/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute           source /opt/tools/xilinx/Vivado/2019.1/common/technology/xilinx/interface/plb46.lib 
+Execute           source /opt/tools/xilinx/Vivado/2019.1/common/technology/xilinx/interface/fsl.lib 
+Execute           source /opt/tools/xilinx/Vivado/2019.1/common/technology/xilinx/interface/axi4.lib 
+Execute           source /opt/tools/xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.lib 
+Execute           source /opt/tools/xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.lib 
+Execute         source /opt/tools/xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.lib 
+Execute         source /opt/tools/xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfir.lib 
+Execute         source /opt/tools/xilinx/Vivado/2019.1/common/technology/xilinx/ip/dds_compiler.lib 
+Execute         source /opt/tools/xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfft.lib 
+Execute       source /opt/tools/xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.hlp 
+Execute         source /opt/tools/xilinx/Vivado/2019.1/common/technology/xilinx/common/target_info.tcl 
+Execute         source /opt/tools/xilinx/Vivado/2019.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source /opt/tools/xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.hlp 
+Execute           source /opt/tools/xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source /opt/tools/xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.hlp 
+Execute       source /opt/tools/xilinx/Vivado/2019.1/common/technology/xilinx/zynquplus/dsp48e2.hlp 
+Execute       source /opt/tools/xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.hlp 
+Execute         source /opt/tools/xilinx/Vivado/2019.1/common/technology/xilinx/common/target_info.tcl 
+Execute         source /opt/tools/xilinx/Vivado/2019.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source /opt/tools/xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.hlp 
+Execute           source /opt/tools/xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source /opt/tools/xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.hlp 
+Execute     source /opt/tools/xilinx/Vivado/2019.1/common/technology/xilinx/zynquplus/zynquplus.gen 
+Execute       source /opt/tools/xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.gen 
+Execute         source /opt/tools/xilinx/Vivado/2019.1/common/technology/xilinx/interface/plb46.gen 
+Execute         source /opt/tools/xilinx/Vivado/2019.1/common/technology/xilinx/interface/fsl.gen 
+Execute         source /opt/tools/xilinx/Vivado/2019.1/common/technology/xilinx/interface/axi4.gen 
+Execute         source /opt/tools/xilinx/Vivado/2019.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source /opt/tools/xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.gen 
+Execute           source /opt/tools/xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.gen 
+Execute         source /opt/tools/xilinx/Vivado/2019.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source /opt/tools/xilinx/Vivado/2019.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source /opt/tools/xilinx/Vivado/2019.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source /opt/tools/xilinx/Vivado/2019.1/common/technology/xilinx/ip/util.gen 
+Execute         source /opt/tools/xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfft.gen 
+Command         ap_source done; 0.13 sec.
+Execute         source /opt/tools/xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfir.gen 
+Execute         source /opt/tools/xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.21 sec.
+Command     ap_source done; 0.22 sec.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib /opt/tools/xilinx/Vivado/2019.1/common/technology/xilinx/zynquplus/zynquplus_fpv7 
+Execute       source /opt/tools/xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.lib 
+Execute       source /opt/tools/xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.hlp 
+Execute         source /opt/tools/xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.hlp 
+Execute           source /opt/tools/xilinx/Vivado/2019.1/common/technology/xilinx/common/target_info.tcl 
+Execute           source /opt/tools/xilinx/Vivado/2019.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source /opt/tools/xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.hlp 
+Execute             source /opt/tools/xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source /opt/tools/xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.hlp 
+Execute     source /opt/tools/xilinx/Vivado/2019.1/common/technology/xilinx/zynquplus/zynquplus_fpv7.gen 
+Execute       source /opt/tools/xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.gen 
+Execute     set_part xczu3eg-sbva484-1-e 
+Execute       ap_part_info -name xczu3eg-sbva484-1-e -data single -quiet 
+Command       ap_part_info done; 3.46 sec.
+Execute       ap_part_info -name xczu3eg-sbva484-1-e -data info 
+Execute       add_library xilinx/zynquplus/zynquplus:xczu3eg:-sbva484:-1-e 
+Execute         get_default_platform 
+Execute         license_isbetapart xczu3eg 
+Command         license_isbetapart done; error code: 1; 
+Execute         ap_part_info -data single -name xczu3eg-sbva484-1-e 
+Execute         ap_part_info -name xczu3eg-sbva484-1-e -data resources 
+Execute         ap_part_info -name xczu3eg-sbva484-1-e -data info 
+Execute         ap_part_info -name xczu3eg-sbva484-1-e -data info 
+Execute         config_chip_info -quiet -resource {SLICE 8820} {LUT 70560} {FF 141120} {DSP48E 360} {BRAM 432} {URAM 0} 
+Execute         ap_part_info -name xczu3eg-sbva484-1-e -data info 
+Execute         config_chip_info -quiet -speed slow 
+Execute       add_library xilinx/zynquplus/zynquplus_fpv7 
+Execute         get_default_platform 
+INFO: [HLS 200-10] Setting target device to 'xczu3eg-sbva484-1-e'
+Execute       ap_part_info -name xczu3eg-sbva484-1-e -data info 
+Execute       get_default_platform 
+Command     set_part done; 3.69 sec.
+Execute     ap_part_info -data single -name xczu3eg-sbva484-1-e 
+Execute     ap_part_info -name xczu3eg-sbva484-1-e -data resources 
+Execute     ap_part_info -name xczu3eg-sbva484-1-e -data info 
+Execute     ap_part_info -name xczu3eg-sbva484-1-e -data info 
+Execute     config_chip_info -quiet -resource {SLICE 8820} {LUT 70560} {FF 141120} {DSP48E 360} {BRAM 432} {URAM 0} 
+Execute     ap_part_info -name xczu3eg-sbva484-1-e -data info 
+Execute     config_chip_info -quiet -speed slow 
+Execute     config_sdx -target=none 
+Execute       send_msg_by_id INFO @200-435@%s%s 'config_sdx -target' config_export -vivado_optimization_level=2 
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_export -vivado_optimization_level=2
+Execute       config_export -vivado_optimization_level=2 
+Execute         get_config_export -vivado_impl_strategy 
+Execute         get_config_export -vivado_phys_opt 
+Execute       get_config_compile -pipeline_loops 
+Execute       get_config_compile -name_max_length 
+Execute       get_config_schedule -enable_dsp_full_reg 
+Execute       get_config_rtl -register_reset_num 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       get_config_interface -m_axi_addr64 
+Execute       send_msg_by_id INFO @200-435@%s%s 'config_sdx -target' set_clock_uncertainty default 
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty default
+Execute       set_clock_uncertainty default 
+Execute     config_export -format=ip_catalog 
+Execute     config_export -rtl=verilog 
+Execute     config_export -vivado_optimization_level=2 
+Execute       get_config_export -vivado_impl_strategy 
+Execute       get_config_export -vivado_phys_opt 
+Execute     config_export -vivado_phys_opt=place 
+Execute     config_export -vivado_report_level=0 
+Command   open_solution done; 4.17 sec.
+Execute   set_part xczu3eg-sbva484-1-e 
+Execute     ap_part_info -name xczu3eg-sbva484-1-e -data single -quiet 
+Execute     ap_part_info -name xczu3eg-sbva484-1-e -data info 
+Execute     add_library xilinx/zynquplus/zynquplus:xczu3eg:-sbva484:-1-e 
+Execute       get_default_platform 
+Execute       license_isbetapart xczu3eg 
+Command       license_isbetapart done; error code: 1; 
+Execute       ap_part_info -data single -name xczu3eg-sbva484-1-e 
+Execute       ap_part_info -name xczu3eg-sbva484-1-e -data resources 
+Execute       ap_part_info -name xczu3eg-sbva484-1-e -data info 
+Execute       ap_part_info -name xczu3eg-sbva484-1-e -data info 
+Execute       config_chip_info -quiet -resource {SLICE 8820} {LUT 70560} {FF 141120} {DSP48E 360} {BRAM 432} {URAM 0} 
+Execute       ap_part_info -name xczu3eg-sbva484-1-e -data info 
+Execute       config_chip_info -quiet -speed slow 
+Execute     add_library xilinx/zynquplus/zynquplus_fpv7 
+Execute       get_default_platform 
+Execute     ap_part_info -name xczu3eg-sbva484-1-e -data info 
+Execute     get_default_platform 
+Command   set_part done; 0.21 sec.
+Execute   create_clock -period 2 -name default 
+Execute   config_sdx -target none 
+Execute     send_msg_by_id INFO @200-435@%s%s 'config_sdx -target' config_export -vivado_optimization_level=2 
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_export -vivado_optimization_level=2
+Execute     config_export -vivado_optimization_level=2 
+Execute       get_config_export -vivado_impl_strategy 
+Execute       get_config_export -vivado_phys_opt 
+Execute     get_config_compile -pipeline_loops 
+Execute     get_config_compile -name_max_length 
+Execute     get_config_schedule -enable_dsp_full_reg 
+Execute     get_config_rtl -register_reset_num 
+Execute     get_config_rtl -module_auto_prefix 
+Execute     get_config_interface -m_axi_addr64 
+Execute     send_msg_by_id INFO @200-435@%s%s 'config_sdx -target' set_clock_uncertainty default 
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty default
+Execute     set_clock_uncertainty default 
+Execute   config_export -format ip_catalog -rtl verilog -vivado_optimization_level 2 -vivado_phys_opt place -vivado_report_level 0 
+Execute     get_config_export -vivado_impl_strategy 
+Execute   set_clock_uncertainty 12.5% 
+Execute   csynth_design 
+Execute     get_config_compile -dump_cfg 
+Execute     get_config_compile -effort 
+Execute     get_config_compile -enable_clang39 
+Execute     get_config_compile -g 
+Execute     get_config_compile -ng 
+Execute     get_config_compile -opt_fp 
+Execute     get_config_compile -skip_cdt 
+Execute     get_config_compile -skip_syncheck 
+Execute     get_config_compile -skip_transform 
+Execute     get_config_compile -keep_printf 
+Execute     elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 -from_csynth_design=1 
+Execute       get_config_schedule -relax_ii_for_timing 
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+Execute       get_config_schedule -suppress_dependence_error_break 
+INFO: [HLS 200-10] Analyzing design file 'lstm_kernel.c' ... 
+INFO-FLOW: Compiling one TU...
+Execute       is_m_axi_addr64 
+INFO-FLOW: Handling lstm_kernel.c as C
+Execute       ap_part_info -name xczu3eg-sbva484-1-e -data info 
+Execute       is_encrypted lstm_kernel.c 
+INFO-FLOW: Running: GCC PP
+INFO-FLOW: Source preprocessing
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "/opt/tools/xilinx/Vivado/2019.1/lnx64/tools/gcc" -hls  -fno-exceptions  -D__llvm__  -E "lstm_kernel.c"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89   -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/tools/xilinx/Vivado/2019.1/common/technology/autopilot" -I "/opt/tools/xilinx/Vivado/2019.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E2__  -o "/curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/lstm_kernel/solution1/.autopilot/db/lstm_kernel.pp.0.c" 
+INFO-FLOW: exec /opt/tools/xilinx/Vivado/2019.1/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /opt/tools/xilinx/Vivado/2019.1/lnx64/tools/gcc -hls -fno-exceptions -D__llvm__ -E lstm_kernel.c -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -std=gnu89 -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /opt/tools/xilinx/Vivado/2019.1/common/technology/autopilot -I /opt/tools/xilinx/Vivado/2019.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -o /curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/lstm_kernel/solution1/.autopilot/db/lstm_kernel.pp.0.c
+Command       clang done; 4.13 sec.
+Execute       tidy_31 xilinx-xfmat-array-geometry /curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/lstm_kernel/solution1/.autopilot/db/lstm_kernel.pp.0.c std=gnu89 
+INFO-FLOW: exec /opt/tools/xilinx/Vivado/2019.1/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-xfmat-array-geometry -quiet -fix /curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/lstm_kernel/solution1/.autopilot/db/lstm_kernel.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0
+Command       tidy_31 done; 0.36 sec.
+INFO-FLOW: Syntax Checking before pre-processing...
+Execute       clang -syntaxcheck -src /curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/lstm_kernel/solution1/.autopilot/db/lstm_kernel.pp.0.c  -fno-limit-debug-info -gcc-toolchain "/opt/tools/xilinx/Vivado/2019.1/lnx64/tools/gcc" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89   -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/tools/xilinx/Vivado/2019.1/common/technology/autopilot" -I "/opt/tools/xilinx/Vivado/2019.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E2__  "/curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/lstm_kernel/solution1/.autopilot/db/lstm_kernel.pp.0.c"  -o "/curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/lstm_kernel/solution1/.autopilot/db/useless.bc"  
+INFO-FLOW: exec /opt/tools/xilinx/Vivado/2019.1/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /opt/tools/xilinx/Vivado/2019.1/lnx64/tools/gcc -hls -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -std=gnu89 -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /opt/tools/xilinx/Vivado/2019.1/common/technology/autopilot -I /opt/tools/xilinx/Vivado/2019.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ /curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/lstm_kernel/solution1/.autopilot/db/lstm_kernel.pp.0.c -o /curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/lstm_kernel/solution1/.autopilot/db/useless.bc
+Command       clang done; 2.43 sec.
+INFO-FLOW: Done: GCC PP time: 6.9 seconds per iteration
+Execute       source /opt/tools/xilinx/Vivado/2019.1/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
+Execute       source /opt/tools/xilinx/Vivado/2019.1/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
+Execute         source /opt/tools/xilinx/Vivado/2019.1/tps/tcl/tcllib1.11.1/try/try.tcl 
+Execute       list_core -type functional_unit 
+Execute       tidy_31 xilinx-systemc-detector /curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/lstm_kernel/solution1/.autopilot/db/lstm_kernel.pp.0.c std=gnu89 -directive=/curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/lstm_kernel/solution1/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec /opt/tools/xilinx/Vivado/2019.1/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-systemc-detector -import-directive=/curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/lstm_kernel/solution1/.autopilot/db/.systemc_flag -quiet -fix-errors /curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/lstm_kernel/solution1/.autopilot/db/lstm_kernel.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0
+INFO-FLOW: Running: tidy-3.1 CDT preprocess
+Execute       tidy_31 xilinx-directive2pragma /curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/lstm_kernel/solution1/.autopilot/db/lstm_kernel.pp.0.c std=gnu89 -directive=/curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/lstm_kernel/solution1/.autopilot/db/all.directive.json 
+INFO-FLOW: exec /opt/tools/xilinx/Vivado/2019.1/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-directive2pragma -import-directive=/curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/lstm_kernel/solution1/.autopilot/db/all.directive.json -quiet -fix-errors /curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/lstm_kernel/solution1/.autopilot/db/lstm_kernel.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0
+Execute       get_config_dataflow -strict_mode 
+Execute       ap_eval exec -ignorestderr /opt/tools/xilinx/Vivado/2019.1/lnx64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=/curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/lstm_kernel/solution1/.autopilot/db/xilinx-dataflow-lawyer.lstm_kernel.pp.0.c.diag.yml /curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/lstm_kernel/solution1/.autopilot/db/lstm_kernel.pp.0.c -- -std=gnu99 -fhls -ferror-limit=0 -fstrict-dataflow > /curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/lstm_kernel/solution1/.autopilot/db/xilinx-dataflow-lawyer.lstm_kernel.pp.0.c.out.log 2> /curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/lstm_kernel/solution1/.autopilot/db/xilinx-dataflow-lawyer.lstm_kernel.pp.0.c.err.log 
+Execute       tidy_31 -errorcheck xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry /curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/lstm_kernel/solution1/.autopilot/db/lstm_kernel.pp.0.c std=gnu89 
+Execute         ap_eval exec -ignorestderr /opt/tools/xilinx/Vivado/2019.1/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -export-fixes=/curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/lstm_kernel/solution1/.autopilot/db/tidy-3.1.lstm_kernel.pp.0.c.diag.yml -header-filter=.* -checks=-*,xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry -quiet -fix-errors /curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/lstm_kernel/solution1/.autopilot/db/lstm_kernel.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0 > /curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/lstm_kernel/solution1/.autopilot/db/tidy-3.1.lstm_kernel.pp.0.c.out.log 2> /curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/lstm_kernel/solution1/.autopilot/db/tidy-3.1.lstm_kernel.pp.0.c.err.log 
+Command         ap_eval done; 0.23 sec.
+Execute         source /opt/tools/xilinx/Vivado/2019.1/tps/tcl/tcllib1.11.1/yaml/yaml.tcl 
+Execute           source /opt/tools/xilinx/Vivado/2019.1/tps/tcl/tcllib1.11.1/cmdline/cmdline.tcl 
+Execute         ap_eval exec -ignorestderr /opt/tools/xilinx/Vivado/2019.1/lnx64/tools/clang-3.9-csynth/bin/xilinx-legacy-rewriter /curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/lstm_kernel/solution1/.autopilot/db/lstm_kernel.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0 > /curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/lstm_kernel/solution1/.autopilot/db/xilinx-legacy-rewriter.lstm_kernel.pp.0.c.out.log 2> /curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/lstm_kernel/solution1/.autopilot/db/xilinx-legacy-rewriter.lstm_kernel.pp.0.c.err.log 
+Command         ap_eval done; 0.15 sec.
+Command       tidy_31 done; 0.51 sec.
+INFO-FLOW: Done: tidy-3.1 CDT preprocess time: 0.7 seconds per iteration
+INFO-FLOW: Pragma Handling...
+Execute       tidy_31 xilinx-ssdm-intrinsics-arguments /curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/lstm_kernel/solution1/.autopilot/db/lstm_kernel.pragma.1.c std=gnu89 
+INFO-FLOW: exec /opt/tools/xilinx/Vivado/2019.1/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-ssdm-intrinsics-arguments -quiet -fix-errors /curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/lstm_kernel/solution1/.autopilot/db/lstm_kernel.pragma.1.c -- -std=gnu89 -fhls -ferror-limit=0
+Command       tidy_31 done; 0.38 sec.
+Execute       ap_part_info -name xczu3eg-sbva484-1-e -data info 
+INFO-FLOW: Processing labels
+Execute       clang -src /curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/lstm_kernel/solution1/.autopilot/db/lstm_kernel.pragma.2.c  -fno-limit-debug-info -gcc-toolchain /opt/tools/xilinx/Vivado/2019.1/lnx64/tools/gcc -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "/curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/lstm_kernel/solution1/.autopilot/db/lstm_kernel.pragma.2.c"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89  -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/tools/xilinx/Vivado/2019.1/common/technology/autopilot" -I "/opt/tools/xilinx/Vivado/2019.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -g -o "/curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/lstm_kernel/solution1/.autopilot/db/lstm_kernel.bc" 
+INFO-FLOW: exec /opt/tools/xilinx/Vivado/2019.1/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /opt/tools/xilinx/Vivado/2019.1/lnx64/tools/gcc -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w /curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/lstm_kernel/solution1/.autopilot/db/lstm_kernel.pragma.2.c -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -std=gnu89 -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /opt/tools/xilinx/Vivado/2019.1/common/technology/autopilot -I /opt/tools/xilinx/Vivado/2019.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -g -o /curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/lstm_kernel/solution1/.autopilot/db/lstm_kernel.bc
+Command       clang done; 2.47 sec.
+INFO-FLOW: Linking Debug ...
+Execute       llvm-ld /curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/lstm_kernel/solution1/.autopilot/db/lstm_kernel.g.bc -hls-opt -except-internalize lstm_kernel -L/opt/tools/xilinx/Vivado/2019.1/lnx64/lib -lhlsm -lhlsmc++ -o /curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/lstm_kernel/solution1/.autopilot/db/a.g 
+Command       llvm-ld done; 1.26 sec.
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:12 ; elapsed = 00:00:18 . Memory (MB): peak = 897.297 ; gain = 198.969 ; free physical = 59247 ; free virtual = 110928
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:12 ; elapsed = 00:00:18 . Memory (MB): peak = 897.297 ; gain = 198.969 ; free physical = 59247 ; free virtual = 110928
+Execute       get_config_sdx -target 
+Execute       opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 
+Execute         cleanup_all_models 
+INFO: [HLS 200-10] Starting code transformations ...
+Execute         transform -promote-dbg-pointer /curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/lstm_kernel/solution1/.autopilot/db/a.pp.bc -o /curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/lstm_kernel/solution1/.autopilot/db/a.pp.0.bc -f 
+Execute         llvm-ld /curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/lstm_kernel/solution1/.autopilot/db/a.pp.0.bc -disable-opt -L/opt/tools/xilinx/Vivado/2019.1/lnx64/lib -lfloatconversion -o /curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/lstm_kernel/solution1/.autopilot/db/a.g.0 
+Command         llvm-ld done; 1.22 sec.
+INFO-FLOW: Running Standard Transforms...
+Execute         transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -mem2reg -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -prune-eh -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top lstm_kernel -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -func-inst -deadargelim -auto-shift-reg-idiom -promote-dbg-pointer -norm-name /curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/lstm_kernel/solution1/.autopilot/db/a.g.0.bc -o /curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/lstm_kernel/solution1/.autopilot/db/a.g.1.bc -f -phase std-opt 
+Command         transform done; 0.11 sec.
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:13 ; elapsed = 00:00:20 . Memory (MB): peak = 897.297 ; gain = 198.969 ; free physical = 59243 ; free virtual = 110925
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO-FLOW: Checking Synthesizability 1/2..
+Execute         transform -hls -syn-check -check-rec-only -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -function-uniquify -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -pag -array-normalize -instcombine -dce -warn-fifo-pointer -array-seg-normalize -instcombine -dce -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -resolve-double-ptr -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -function-uniquify -directive-preproc -mem2reg -dse -dce -globaldce -check-dspbuiltin /curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/lstm_kernel/solution1/.autopilot/db/a.g.1.bc -o /curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/lstm_kernel/solution1/.autopilot/db/a.g.2.prechk.bc -f 
+INFO-FLOW: Checking Synthesizability 2/2..
+Execute         transform -syn-check /curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/lstm_kernel/solution1/.autopilot/db/a.g.2.prechk.bc -o /curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/lstm_kernel/solution1/.autopilot/db/a.g.2.bc -f -phase syn-check 
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:13 ; elapsed = 00:00:20 . Memory (MB): peak = 897.297 ; gain = 198.969 ; free physical = 59243 ; free virtual = 110924
+INFO-FLOW: Compiler optimizing ...
+INFO-FLOW: Share syncheck's 1.bc for syn flow: copy /curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/lstm_kernel/solution1/.autopilot/db/a.g.1.bc to /curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/lstm_kernel/solution1/.autopilot/db/a.o.1.bc
+INFO-FLOW: Presyn 1...
+Execute         transform -hls -tmp /curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/lstm_kernel/solution1/.autopilot/db -interface-port-rename -type-info -function-uniquify -directive-preproc -mem2reg -dse -dce -disaggr -scalarrepl -norm-name -deadargelim -mem2reg -instcombine -dce -simplifycfg -auto-rom-infer -dce -function-uniquify -resource-proc -clib-intrinsic-prepare -dce -func-buffer -dce -pag -array-normalize -func-legal -instcombine -gvn -constprop -dce -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -ptrArgReplace -mem2reg -dce -array-seg-normalize -deadargelim -instcombine -dce -pointer-simplify -dce -port-alignment -dce -interface-preproc -data-pack -instcombine -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -loop-simplify -indvars -instcombine -gvn -loop-simplify -mem2reg -dce -find-region -instcombine -auto-loop-pipeline -inst-simplify -interface-preproc -cfgopt -instcombine -indvars -auto-loop-unroll -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -clean-region -attach-range -gvn -inst-simplify -constprop -simplifycfg -dce -pointer-simplify -dce -globalopt -constprop -dce -array-promote -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -auto-par -instcombine -dce -array-transform-check -array-reshape -instcombine -simplifycfg -dce -ptrArgReplace -deadargelim -mem2reg -instcombine -simplifycfg -dce -indvars -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -duplicate-dataflow-processes -globaldce -instcombine -array-partition -instcombine -simplifycfg -dce -ptrArgReplace -global-constprop -deadargelim -mem2reg -func-legal -dce -global-constprop -deadargelim -mem2reg -simplifycfg -dce -merge-param -deadargelim -globalopt -constprop -dce -array-promote -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -mem-intrinsic-preproc -dce -global-internalize -global-privatize -mem2reg -globaldce -promote-global-argument -ptrArgReplace -mem2reg -dce -globalopt -mergereturn -simplify-global-access -mem2reg -dce -pointer-simplify -dce -functionattrs -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -dce -norm-name -function-inline -complex-op-raise -inst-simplify -globaldce -func-inst -constprop -instcombine -simplifycfg -dce -func-legal -dce -loop-bound -arraycheck -bitwidthmin -on-by-dataflow -loop-delete -instcombine -simplifycfg -globaldce -dce -gvn -deadargelim -dce -loop-simplify -clean-region -simplifycfg -propagate-stable-arguments -loop-stream -instcombine -simplifycfg -dce -globaldce -duplicate-dataflow-processes -stream-intrinsic-preproc -dce -check-ap-stream -loop-simplify -eliminate-keepreads -extract-dataflow-in-loop -loop-simplify -dce -gvn -deadargelim -dse -check-dataflow-syntax -legalize-stream-variable -legalize-global -extract-subproc -dce -dead-channel-elimination -canonicalize-gep -globaldce -dce -gvn -deadargelim -annotate-dataflow-channels -scalar-propagation -deadargelim -globaldce -mem2reg -check-dataflow-channels -function-stream -dce -globaldce -prop-fifo-spec -internal-stream-gen -canonicalize-gep -globaldce -dce -gvn -deadargelim -mergereturn -indvars -loop-simplify -instcombine -array-stream -array-seg-normalize -array-partition -func-legal -instcombine -simplifycfg -dce -bundle-memfifo-ops -deadargelim -function-uniquify -directive-preproc -mem2reg -dse -dce -group-axi-access -licm -simplifycfg -dce -loop-delete -norm-name /curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/lstm_kernel/solution1/.autopilot/db/a.o.1.bc -o /curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/lstm_kernel/solution1/.autopilot/db/a.o.1.tmp.bc -f 
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-6' (lstm_kernel.c:344) in function 'lstm_kernel' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-7.1' (lstm_kernel.c:353) in function 'lstm_kernel' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-8' (lstm_kernel.c:362) in function 'lstm_kernel' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'Loop-4' (lstm_kernel.c:329) in function 'lstm_kernel' completely with a factor of 20.
+INFO: [HLS 200-489] Unrolling loop 'Loop-5' (lstm_kernel.c:334) in function 'lstm_kernel' completely with a factor of 20.
+INFO: [HLS 200-489] Unrolling loop 'Loop-6.1' (lstm_kernel.c:346) in function 'lstm_kernel' completely with a factor of 20.
+INFO: [HLS 200-489] Unrolling loop 'Loop-7.1.1' (lstm_kernel.c:355) in function 'lstm_kernel' completely with a factor of 20.
+INFO: [HLS 200-489] Unrolling loop 'Loop-8.1' (lstm_kernel.c:364) in function 'lstm_kernel' completely with a factor of 20.
+Command         transform done; 0.65 sec.
+INFO-FLOW: Presyn 2...
+Execute         transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -auto-burst -norm-name /curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/lstm_kernel/solution1/.autopilot/db/a.o.1.tmp.bc -o /curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/lstm_kernel/solution1/.autopilot/db/a.o.2.bc -f -phase presyn 
+Command         transform done; 0.38 sec.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:14 ; elapsed = 00:00:21 . Memory (MB): peak = 897.297 ; gain = 198.969 ; free physical = 59222 ; free virtual = 110903
+INFO-FLOW: Building ssdm...
+Execute         transform -hls -function-uniquify -auto-function-inline -globaldce -ptrArgReplace -mem2reg -dce -reset-lda -loop-simplify -indvars -licm -loop-dep -loop-bound -licm -loop-simplify -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify -array-burst -promote-global-argument -dce -ptrLegalization -axi4-lower -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -disaggr -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -bitwidthmin -deadargelim -dce -canonicalize-dataflow -dce -scalar-propagation -deadargelim -globaldce -mem2reg -read-loop-dep -interface-preproc -directive-preproc -interface-gen -bram-byte-enable -deadargelim -inst-simplify -dce -gvn -mem2reg -instcombine -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -complex-op-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg -loop-simplify -mergereturn -inst-simplify -inst-rectify -dce -load-elim -bitop-lower -loop-rewind -pointer-simplify -dce -cfgopt -dce -loop-bound -loop-dep -read-loop-dep -dce -check-stream -norm-name -legalize -validate-dataflow -inst-clarity -bitwidth -dump-loop-dep-to-ir -check-all-ssdm -cdfg-build /curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/lstm_kernel/solution1/.autopilot/db/a.o.2.bc -o /curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/lstm_kernel/solution1/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-5' (lstm_kernel.c:352:11) in function 'lstm_kernel'.
+Command         transform done; 1.84 sec.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:16 ; elapsed = 00:00:23 . Memory (MB): peak = 897.297 ; gain = 198.969 ; free physical = 59223 ; free virtual = 110905
+INFO-FLOW: Finish building internal data model.
+Command       opt_and_import_c done; 4.47 sec.
+Command     elaborate done; 16.99 sec.
+Execute     autosyn -from_csynth_design=1 
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO-FLOW: Synthesizing C/C++ design ...
+INFO: [HLS 200-10] Synthesizing 'lstm_kernel' ...
+Execute       ap_set_top_model lstm_kernel 
+Execute       get_model_list lstm_kernel -filter all-wo-channel -topdown 
+Execute       preproc_iomode -model lstm_kernel 
+Execute       get_model_list lstm_kernel -filter all-wo-channel 
+INFO-FLOW: Model list for configure: lstm_kernel
+INFO-FLOW: Configuring Module : lstm_kernel ...
+Execute       set_default_model lstm_kernel 
+Execute       apply_spec_resource_limit lstm_kernel 
+INFO-FLOW: Model list for preprocess: lstm_kernel
+INFO-FLOW: Preprocessing Module: lstm_kernel ...
+Execute       set_default_model lstm_kernel 
+Execute       cdfg_preprocess -model lstm_kernel 
+Execute       rtl_gen_preprocess lstm_kernel 
+INFO-FLOW: Model list for synthesis: lstm_kernel
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'lstm_kernel' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model lstm_kernel 
+Execute       schedule -model lstm_kernel 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 4'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('weight_l_load_2', lstm_kernel.c:348) on array 'weight_l' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'weight_l'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 10, Depth = 17.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 5'.
+WARNING: [SCHED 204-68] The II Violation in module 'lstm_kernel' (Loop: Loop 5): Unable to enforce a carried dependence constraint (II = 1, distance = 4, offset = 1)
+   between 'store' operation ('lstm_state_addr_44_write_ln357', lstm_kernel.c:357) of variable 'add_ln357_1', lstm_kernel.c:357 on array 'lstm_state', lstm_kernel.c:297 and 'load' operation ('lstm_state_load_40', lstm_kernel.c:357) on array 'lstm_state', lstm_kernel.c:297.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('weight_l_load_44', lstm_kernel.c:357) on array 'weight_l' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'weight_l'.
+WARNING: [SCHED 204-69] Unable to schedule 'store' operation ('lstm_state_addr_62_write_ln357', lstm_kernel.c:357) of variable 'add_ln357_19', lstm_kernel.c:357 on array 'lstm_state', lstm_kernel.c:297 due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'lstm_state'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 20, Depth = 41.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 6'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('lstm_state_load_22', lstm_kernel.c:366) on array 'lstm_state', lstm_kernel.c:297 due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'lstm_state'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 20, Depth = 20.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 7'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('lstm_state_load_14', lstm_kernel.c:400) on array 'lstm_state', lstm_kernel.c:297 due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'lstm_state'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 18, Depth = 96.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 8'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 7.
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 2.65 sec.
+INFO: [HLS 200-111]  Elapsed time: 25.3 seconds; current allocated memory: 122.136 MB.
+Execute       syn_report -verbosereport -o /curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/lstm_kernel/solution1/.autopilot/db/lstm_kernel.verbose.sched.rpt 
+INFO: [HLS 200-434] Only 5 loops out of a total 9 loops have been pipelined in this design.
+Command       syn_report done; 1.41 sec.
+Execute       db_write -o /curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/lstm_kernel/solution1/.autopilot/db/lstm_kernel.sched.adb -f 
+Command       db_write done; 0.36 sec.
+INFO-FLOW: Finish scheduling lstm_kernel.
+Execute       set_default_model lstm_kernel 
+Execute       bind -model lstm_kernel 
+BIND OPTION: model=lstm_kernel
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind done; 1 sec.
+INFO: [HLS 200-111]  Elapsed time: 2.78 seconds; current allocated memory: 127.616 MB.
+Execute       syn_report -verbosereport -o /curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/lstm_kernel/solution1/.autopilot/db/lstm_kernel.verbose.bind.rpt 
+Command       syn_report done; 1.63 sec.
+Execute       db_write -o /curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/lstm_kernel/solution1/.autopilot/db/lstm_kernel.bind.adb -f 
+Command       db_write done; 0.33 sec.
+INFO-FLOW: Finish binding lstm_kernel.
+Execute       get_model_list lstm_kernel -filter all-wo-channel 
+INFO-FLOW: Preprocessing for RTLGen ...
+Execute       rtl_gen_preprocess lstm_kernel 
+INFO-FLOW: Model list for RTL generation: lstm_kernel
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'lstm_kernel' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       create_rtl_model lstm_kernel -vendor xilinx -mg_file /curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/lstm_kernel/solution1/.autopilot/db/lstm_kernel.compgen.tcl 
+INFO: [RTGEN 206-500] Setting interface mode on port 'lstm_kernel/mode' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lstm_kernel/init' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lstm_kernel/sampleinput' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lstm_kernel/max_v' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lstm_kernel/min_v' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lstm_kernel/weight' to 'bram'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lstm_kernel/lstm_out' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'lstm_kernel' to 'ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lstm_kernel/weight_WEN_A' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lstm_kernel/weight_Din_A' to 0.
+INFO: [RTGEN 206-100] Generating core module 'lstm_kernel_mul_mul_16ns_16s_28_3_1': 20 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'lstm_kernel_mul_mul_16s_16s_28_3_1': 23 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'lstm_kernel_mul_mul_16s_16s_32_3_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'lstm_kernel_udiv_32ns_32ns_16_36_seq_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'lstm_kernel'.
+Command       create_rtl_model done; 0.86 sec.
+INFO: [HLS 200-111]  Elapsed time: 2.85 seconds; current allocated memory: 137.577 MB.
+Execute       source /curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/lstm_kernel/solution1/.autopilot/db/lstm_kernel.rtl_wrap.cfg.tcl 
+Execute       gen_rtl lstm_kernel -istop -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/lstm_kernel/solution1/syn/systemc/lstm_kernel -synmodules lstm_kernel 
+Execute       gen_rtl lstm_kernel -istop -style xilinx -f -lang vhdl -o /curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/lstm_kernel/solution1/syn/vhdl/lstm_kernel 
+Command       gen_rtl done; 0.43 sec.
+Execute       gen_rtl lstm_kernel -istop -style xilinx -f -lang vlog -o /curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/lstm_kernel/solution1/syn/verilog/lstm_kernel 
+Command       gen_rtl done; 0.22 sec.
+Execute       syn_report -csynth -model lstm_kernel -o /curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/lstm_kernel/solution1/syn/report/lstm_kernel_csynth.rpt 
+Command       syn_report done; 0.2 sec.
+Execute       syn_report -rtlxml -model lstm_kernel -o /curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/lstm_kernel/solution1/syn/report/lstm_kernel_csynth.xml 
+Command       syn_report done; 0.15 sec.
+Execute       syn_report -verbosereport -model lstm_kernel -o /curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/lstm_kernel/solution1/.autopilot/db/lstm_kernel.verbose.rpt 
+Command       syn_report done; 1.59 sec.
+Execute       db_write -model lstm_kernel -f -o /curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/lstm_kernel/solution1/.autopilot/db/lstm_kernel.adb 
+Command       db_write done; 0.76 sec.
+Execute       gen_tb_info lstm_kernel -p /curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/lstm_kernel/solution1/.autopilot/db -o /curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/lstm_kernel/solution1/.autopilot/db/lstm_kernel 
+Execute       export_constraint_db -f -tool general -o /curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/lstm_kernel/solution1/.autopilot/db/lstm_kernel.constraint.tcl 
+Execute       syn_report -designview -model lstm_kernel -o /curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/lstm_kernel/solution1/.autopilot/db/lstm_kernel.design.xml 
+Command       syn_report done; 0.36 sec.
+Execute       get_config_rtl -disable_wave_debug 
+Execute       syn_report -wcfg -model lstm_kernel -o /curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/lstm_kernel/solution1/.autopilot/db/lstm_kernel_dataflow_ana.wcfg 
+Execute       syn_report -protoinst -model lstm_kernel -o /curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/lstm_kernel/solution1/.autopilot/db/lstm_kernel.protoinst 
+Execute       get_config_debug -directory 
+Execute       sc_get_clocks lstm_kernel 
+Execute       get_config_export -vivado_clock 
+Execute       sc_get_portdomain lstm_kernel 
+INFO-FLOW: Model list for RTL component generation: lstm_kernel
+INFO-FLOW: Handling components in module [lstm_kernel] ... 
+Execute       source /curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/lstm_kernel/solution1/.autopilot/db/lstm_kernel.compgen.tcl 
+INFO-FLOW: Found component lstm_kernel_udiv_32ns_32ns_16_36_seq_1.
+INFO-FLOW: Append model lstm_kernel_udiv_32ns_32ns_16_36_seq_1
+INFO-FLOW: Found component lstm_kernel_mul_mul_16ns_16s_28_3_1.
+INFO-FLOW: Append model lstm_kernel_mul_mul_16ns_16s_28_3_1
+INFO-FLOW: Found component lstm_kernel_mul_mul_16s_16s_28_3_1.
+INFO-FLOW: Append model lstm_kernel_mul_mul_16s_16s_28_3_1
+INFO-FLOW: Found component lstm_kernel_mul_mul_16s_16s_32_3_1.
+INFO-FLOW: Append model lstm_kernel_mul_mul_16s_16s_32_3_1
+INFO-FLOW: Found component lstm_kernel_weight_l.
+INFO-FLOW: Append model lstm_kernel_weight_l
+INFO-FLOW: Found component lstm_kernel_h_state.
+INFO-FLOW: Append model lstm_kernel_h_state
+INFO-FLOW: Found component lstm_kernel_lut_sigmoid.
+INFO-FLOW: Append model lstm_kernel_lut_sigmoid
+INFO-FLOW: Found component lstm_kernel_lut_tanh.
+INFO-FLOW: Append model lstm_kernel_lut_tanh
+INFO-FLOW: Found component lstm_kernel_c_state.
+INFO-FLOW: Append model lstm_kernel_c_state
+INFO-FLOW: Found component lstm_kernel_lstm_state.
+INFO-FLOW: Append model lstm_kernel_lstm_state
+INFO-FLOW: Append model lstm_kernel
+INFO-FLOW: Generating RTL model list ...
+INFO-FLOW: All models in this session: lstm_kernel_udiv_32ns_32ns_16_36_seq_1 lstm_kernel_mul_mul_16ns_16s_28_3_1 lstm_kernel_mul_mul_16s_16s_28_3_1 lstm_kernel_mul_mul_16s_16s_32_3_1 lstm_kernel_weight_l lstm_kernel_h_state lstm_kernel_lut_sigmoid lstm_kernel_lut_tanh lstm_kernel_c_state lstm_kernel_lstm_state lstm_kernel
+INFO-FLOW: To file: write model lstm_kernel_udiv_32ns_32ns_16_36_seq_1
+INFO-FLOW: To file: write model lstm_kernel_mul_mul_16ns_16s_28_3_1
+INFO-FLOW: To file: write model lstm_kernel_mul_mul_16s_16s_28_3_1
+INFO-FLOW: To file: write model lstm_kernel_mul_mul_16s_16s_32_3_1
+INFO-FLOW: To file: write model lstm_kernel_weight_l
+INFO-FLOW: To file: write model lstm_kernel_h_state
+INFO-FLOW: To file: write model lstm_kernel_lut_sigmoid
+INFO-FLOW: To file: write model lstm_kernel_lut_tanh
+INFO-FLOW: To file: write model lstm_kernel_c_state
+INFO-FLOW: To file: write model lstm_kernel_lstm_state
+INFO-FLOW: To file: write model lstm_kernel
+INFO-FLOW: Finished generating RTL model list.
+
+
+INFO-FLOW: RTL Generation done.
+INFO-FLOW: CAS Generation done.
+INFO-FLOW: CBC Generation done.
+INFO-FLOW: DBG:CMD: auto_generate_csynth_design
+INFO-FLOW: DBG:CMD:     auto_generate --sim-model -phase csynth_design -d /curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/lstm_kernel/solution1
+Execute       source /curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/lstm_kernel/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: read_platform_lib /curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/lstm_kernel/solution1/.autopilot/db/global.setting.tcl
+Execute       source /opt/tools/xilinx/Vivado/2019.1/common/technology/generic/autopilot/common.gen 
+Execute         source /opt/tools/xilinx/Vivado/2019.1/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source /opt/tools/xilinx/Vivado/2019.1/common/technology/generic/autopilot/op.gen 
+Execute       source /opt/tools/xilinx/Vivado/2019.1/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source /opt/tools/xilinx/Vivado/2019.1/common/technology/generic/autopilot/interface.gen 
+Execute       source /curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/lstm_kernel/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /opt/tools/xilinx/Vivado/2019.1/common/technology/xilinx/zynquplus/zynquplus.gen 
+Execute         source /opt/tools/xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.gen 
+Execute           source /opt/tools/xilinx/Vivado/2019.1/common/technology/xilinx/interface/plb46.gen 
+Execute           source /opt/tools/xilinx/Vivado/2019.1/common/technology/xilinx/interface/fsl.gen 
+Execute           source /opt/tools/xilinx/Vivado/2019.1/common/technology/xilinx/interface/axi4.gen 
+Execute           source /opt/tools/xilinx/Vivado/2019.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source /opt/tools/xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.gen 
+Execute             source /opt/tools/xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.gen 
+Execute           source /opt/tools/xilinx/Vivado/2019.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source /opt/tools/xilinx/Vivado/2019.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source /opt/tools/xilinx/Vivado/2019.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source /opt/tools/xilinx/Vivado/2019.1/common/technology/xilinx/ip/util.gen 
+Execute           source /opt/tools/xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfft.gen 
+Execute           source /opt/tools/xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfir.gen 
+Execute           source /opt/tools/xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source done; 0.17 sec.
+Command       ap_source done; 0.17 sec.
+Execute       source /opt/tools/xilinx/Vivado/2019.1/common/technology/xilinx/zynquplus/zynquplus_fpv7.gen 
+Execute         source /opt/tools/xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.gen 
+INFO-FLOW: DBG:CMD:   using AESL_AUTOCG::g_clock_period=2.000 (was NA)
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=1 export=0 expOnly=0 dstVlogDir=syn/verilog
+Execute       source /curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/lstm_kernel/solution1/.autopilot/db/global.setting.tcl 
+Execute       ap_part_info -name xczu3eg-sbva484-1-e -data names -quiet 
+Execute       ap_part_info -name xczu3eg-sbva484-1-e -data info -quiet 
+Execute       source /curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/lstm_kernel/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/lstm_kernel/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/lstm_kernel/solution1/.autopilot/db/lstm_kernel.compgen.tcl 
+Execute         ap_part_info -name xczu3eg-sbva484-1-e -data names -quiet 
+Execute         ap_part_info -name xczu3eg-sbva484-1-e -data info -quiet 
+INFO: [RTMG 210-282] Generating pipelined core: 'lstm_kernel_udiv_32ns_32ns_16_36_seq_1_div'
+Execute         ap_part_info -name xczu3eg-sbva484-1-e -data names -quiet 
+Execute         ap_part_info -name xczu3eg-sbva484-1-e -data info -quiet 
+Execute         ap_part_info -name xczu3eg-sbva484-1-e -data names -quiet 
+Execute         ap_part_info -name xczu3eg-sbva484-1-e -data info -quiet 
+Execute         ap_part_info -name xczu3eg-sbva484-1-e -data names -quiet 
+Execute         ap_part_info -name xczu3eg-sbva484-1-e -data info -quiet 
+INFO: [RTMG 210-278] Implementing memory 'lstm_kernel_weight_l_ram (RAM)' using block RAMs with power-on initialization.
+Execute         ap_part_info -name xczu3eg-sbva484-1-e -data names -quiet 
+Execute         ap_part_info -name xczu3eg-sbva484-1-e -data info -quiet 
+INFO: [RTMG 210-278] Implementing memory 'lstm_kernel_h_state_ram (RAM)' using block RAMs with reset.
+Execute         ap_part_info -name xczu3eg-sbva484-1-e -data names -quiet 
+Execute         ap_part_info -name xczu3eg-sbva484-1-e -data info -quiet 
+Execute         ap_part_info -name xczu3eg-sbva484-1-e -data names -quiet 
+Execute         ap_part_info -name xczu3eg-sbva484-1-e -data info -quiet 
+INFO: [RTMG 210-279] Implementing memory 'lstm_kernel_lut_sigmoid_rom' using auto ROMs.
+Execute         ap_part_info -name xczu3eg-sbva484-1-e -data names -quiet 
+Execute         ap_part_info -name xczu3eg-sbva484-1-e -data info -quiet 
+Execute         ap_part_info -name xczu3eg-sbva484-1-e -data names -quiet 
+Execute         ap_part_info -name xczu3eg-sbva484-1-e -data info -quiet 
+Execute         ap_part_info -name xczu3eg-sbva484-1-e -data names -quiet 
+Execute         ap_part_info -name xczu3eg-sbva484-1-e -data info -quiet 
+INFO: [RTMG 210-279] Implementing memory 'lstm_kernel_lut_tanh_rom' using auto ROMs.
+Execute         ap_part_info -name xczu3eg-sbva484-1-e -data names -quiet 
+Execute         ap_part_info -name xczu3eg-sbva484-1-e -data info -quiet 
+Execute         ap_part_info -name xczu3eg-sbva484-1-e -data names -quiet 
+Execute         ap_part_info -name xczu3eg-sbva484-1-e -data info -quiet 
+INFO: [RTMG 210-278] Implementing memory 'lstm_kernel_c_state_ram (RAM)' using block RAMs with reset.
+Execute         ap_part_info -name xczu3eg-sbva484-1-e -data names -quiet 
+Execute         ap_part_info -name xczu3eg-sbva484-1-e -data info -quiet 
+INFO: [RTMG 210-278] Implementing memory 'lstm_kernel_lstm_state_ram (RAM)' using block RAMs.
+Execute         ap_part_info -name xczu3eg-sbva484-1-e -data names -quiet 
+Execute         ap_part_info -name xczu3eg-sbva484-1-e -data info -quiet 
+Command       ap_source done; 0.7 sec.
+INFO-FLOW: DBG:CMD:     auto_generate -export -impltomg_flag -rtl both -tool Vivado -pcore_version 1.00.a -phase csynth_design -d /curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/lstm_kernel/solution1
+Execute       source /curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/lstm_kernel/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: read_platform_lib /curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/lstm_kernel/solution1/.autopilot/db/global.setting.tcl
+Execute       source /opt/tools/xilinx/Vivado/2019.1/common/technology/generic/autopilot/common.gen 
+Execute         source /opt/tools/xilinx/Vivado/2019.1/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source /opt/tools/xilinx/Vivado/2019.1/common/technology/generic/autopilot/op.gen 
+Execute       source /opt/tools/xilinx/Vivado/2019.1/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source /opt/tools/xilinx/Vivado/2019.1/common/technology/generic/autopilot/interface.gen 
+Execute       source /curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/lstm_kernel/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /opt/tools/xilinx/Vivado/2019.1/common/technology/xilinx/zynquplus/zynquplus.gen 
+Execute         source /opt/tools/xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.gen 
+Execute           source /opt/tools/xilinx/Vivado/2019.1/common/technology/xilinx/interface/plb46.gen 
+Execute           source /opt/tools/xilinx/Vivado/2019.1/common/technology/xilinx/interface/fsl.gen 
+Execute           source /opt/tools/xilinx/Vivado/2019.1/common/technology/xilinx/interface/axi4.gen 
+Execute           source /opt/tools/xilinx/Vivado/2019.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source /opt/tools/xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.gen 
+Execute             source /opt/tools/xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.gen 
+Execute           source /opt/tools/xilinx/Vivado/2019.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source /opt/tools/xilinx/Vivado/2019.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source /opt/tools/xilinx/Vivado/2019.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source /opt/tools/xilinx/Vivado/2019.1/common/technology/xilinx/ip/util.gen 
+Execute           source /opt/tools/xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfft.gen 
+Command           ap_source done; 0.12 sec.
+Execute           source /opt/tools/xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfir.gen 
+Execute           source /opt/tools/xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source done; 0.2 sec.
+Command       ap_source done; 0.2 sec.
+Execute       source /opt/tools/xilinx/Vivado/2019.1/common/technology/xilinx/zynquplus/zynquplus_fpv7.gen 
+Execute         source /opt/tools/xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.gen 
+INFO-FLOW: DBG:CMD:       initCTypeInfo top_module=lstm_kernel xml_exists=0
+Execute       source /curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/lstm_kernel/solution1/.autopilot/db/lstm_kernel.rtl_wrap.cfg.tcl 
+Execute       source /curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/lstm_kernel/solution1/.autopilot/db/lstm_kernel.rtl_wrap.cfg.tcl 
+Execute       source /curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/lstm_kernel/solution1/.autopilot/db/lstm_kernel.rtl_wrap.cfg.tcl 
+Execute       source /curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/lstm_kernel/solution1/.autopilot/db/lstm_kernel.tbgen.tcl 
+Execute       source /curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/lstm_kernel/solution1/.autopilot/db/lstm_kernel.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       export_impl_rtl
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.verilog
+Execute       source /curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/lstm_kernel/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/lstm_kernel/solution1/.autopilot/db/lstm_kernel.compgen.tcl 
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=1 expOnly=1 dstVlogDir=impl/.pcores/verilog
+Execute       source /curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/lstm_kernel/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/lstm_kernel/solution1/.autopilot/db/lstm_kernel.compgen.tcl 
+Execute         ap_part_info -name xczu3eg-sbva484-1-e -data names -quiet 
+Execute         ap_part_info -name xczu3eg-sbva484-1-e -data info -quiet 
+Execute         ap_part_info -name xczu3eg-sbva484-1-e -data names -quiet 
+Execute         ap_part_info -name xczu3eg-sbva484-1-e -data info -quiet 
+Execute         ap_part_info -name xczu3eg-sbva484-1-e -data names -quiet 
+Execute         ap_part_info -name xczu3eg-sbva484-1-e -data info -quiet 
+Execute         ap_part_info -name xczu3eg-sbva484-1-e -data names -quiet 
+Execute         ap_part_info -name xczu3eg-sbva484-1-e -data info -quiet 
+Execute         ap_part_info -name xczu3eg-sbva484-1-e -data names -quiet 
+Execute         ap_part_info -name xczu3eg-sbva484-1-e -data info -quiet 
+Execute         ap_part_info -name xczu3eg-sbva484-1-e -data names -quiet 
+Execute         ap_part_info -name xczu3eg-sbva484-1-e -data info -quiet 
+Execute         ap_part_info -name xczu3eg-sbva484-1-e -data names -quiet 
+Execute         ap_part_info -name xczu3eg-sbva484-1-e -data info -quiet 
+Execute         ap_part_info -name xczu3eg-sbva484-1-e -data names -quiet 
+Execute         ap_part_info -name xczu3eg-sbva484-1-e -data info -quiet 
+Execute         ap_part_info -name xczu3eg-sbva484-1-e -data names -quiet 
+Execute         ap_part_info -name xczu3eg-sbva484-1-e -data info -quiet 
+Execute         ap_part_info -name xczu3eg-sbva484-1-e -data names -quiet 
+Execute         ap_part_info -name xczu3eg-sbva484-1-e -data info -quiet 
+Execute         ap_part_info -name xczu3eg-sbva484-1-e -data names -quiet 
+Execute         ap_part_info -name xczu3eg-sbva484-1-e -data info -quiet 
+Execute         ap_part_info -name xczu3eg-sbva484-1-e -data names -quiet 
+Execute         ap_part_info -name xczu3eg-sbva484-1-e -data info -quiet 
+Execute         ap_part_info -name xczu3eg-sbva484-1-e -data names -quiet 
+Execute         ap_part_info -name xczu3eg-sbva484-1-e -data info -quiet 
+Execute       ap_part_info -name xczu3eg-sbva484-1-e -data names -quiet 
+Execute       ap_part_info -name xczu3eg-sbva484-1-e -data info -quiet 
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.pcores/verilog_sim
+Execute       source /curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/lstm_kernel/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/lstm_kernel/solution1/.autopilot/db/lstm_kernel.compgen.tcl 
+Execute       ap_part_info -name xczu3eg-sbva484-1-e -data names -quiet 
+Execute       ap_part_info -name xczu3eg-sbva484-1-e -data info -quiet 
+Execute       ap_part_info -name xczu3eg-sbva484-1-e -data names -quiet 
+Execute       ap_part_info -name xczu3eg-sbva484-1-e -data info -quiet 
+Execute       source /curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/lstm_kernel/solution1/.autopilot/db/global.setting.tcl 
+Execute       ap_part_info -name xczu3eg-sbva484-1-e -data names -quiet 
+Execute       ap_part_info -name xczu3eg-sbva484-1-e -data info -quiet 
+Execute       source /curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/lstm_kernel/solution1/.autopilot/db/lstm_kernel.constraint.tcl 
+Execute       source /curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/lstm_kernel/solution1/.autopilot/db/lstm_kernel.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       hasPcoreIpAdapter=false #gSsdmPorts=14
+INFO-FLOW: DBG:CMD: Skipping loadAnalyze_DB, #g_database=7
+INFO-FLOW: DBG:CMD:       generate_json is_phase_csynth=1 g_has_adaptors=false generate_bd_files=0 #modelList=11 #gSsdmPorts=14
+Execute       source /opt/tools/xilinx/Vivado/2019.1/tps/tcl/tcllib1.11.1/fileutil/fileutil.tcl 
+Execute       source /curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/lstm_kernel/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/lstm_kernel/solution1/.autopilot/db/global.setting.tcl 
+Execute       get_config_export -xo 
+Execute       source /curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/lstm_kernel/solution1/.autopilot/db/lstm_kernel.tbgen.tcl 
+Execute       source /curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/lstm_kernel/solution1/.autopilot/db/lstm_kernel.tbgen.tcl 
+Execute       source /curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/lstm_kernel/solution1/.autopilot/db/lstm_kernel.tbgen.tcl 
+Execute       source /curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/lstm_kernel/solution1/.autopilot/db/global.setting.tcl 
+Execute       get_config_sdx -target 
+Execute       source /curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/lstm_kernel/solution1/.autopilot/db/lstm_kernel.rtl_wrap.cfg.tcl 
+Execute       source /curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/lstm_kernel/solution1/.autopilot/db/lstm_kernel.compgen.dataonly.tcl 
+Execute       source /curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/lstm_kernel/solution1/.autopilot/db/global.setting.tcl 
+Execute       ap_part_info -name xczu3eg-sbva484-1-e -data names -quiet 
+Execute       ap_part_info -name xczu3eg-sbva484-1-e -data info -quiet 
+Execute       source /curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/lstm_kernel/solution1/.autopilot/db/lstm_kernel.constraint.tcl 
+Execute       sc_get_clocks lstm_kernel 
+Execute       ap_part_info -name xczu3eg-sbva484-1-e -data names -quiet 
+Execute       ap_part_info -name xczu3eg-sbva484-1-e -data info -quiet 
+Execute       source /curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/lstm_kernel/solution1/.autopilot/db/global.setting.tcl 
+Execute       get_config_debug -directory 
+Execute       source /curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/lstm_kernel/solution1/.autopilot/db/lstm_kernel.tbgen.tcl 
+Execute       get_config_sdx -target 
+Execute       get_config_sdx -profile 
+Execute       get_config_rtl -kernel_profile 
+Execute       get_config_rtl -stall_sig_gen 
+Execute       get_config_rtl -profile 
+INFO-FLOW: DBG:CMD: add_json_sdx_info kernel file does not exist, skipping opencl info: /curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/lstm_kernel/solution1/.autopilot/db/kernel.internal.xml
+INFO-FLOW: DBG:CMD:       delete-temp-dirs (skipped for debug)
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:27 ; elapsed = 00:00:40 . Memory (MB): peak = 897.297 ; gain = 198.969 ; free physical = 59153 ; free virtual = 110855
+INFO: [VHDL 208-304] Generating VHDL RTL for lstm_kernel.
+INFO: [VLOG 209-307] Generating Verilog RTL for lstm_kernel.
+Command     autosyn done; 17.78 sec.
+Command   csynth_design done; 34.81 sec.
+Command ap_source done; 39.36 sec.
+Execute cleanup_all 

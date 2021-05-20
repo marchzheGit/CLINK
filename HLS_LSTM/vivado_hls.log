@@ -1,0 +1,101 @@
+INFO: [HLS 200-10] Running '/opt/tools/xilinx/Vivado/2019.1/bin/unwrapped/lnx64.o/vivado_hls'
+INFO: [HLS 200-10] For user 'zhechen' on host 'u2-zhechen' (Linux_x86_64 version 4.4.0-148-generic) on Fri Sep 06 17:03:21 PDT 2019
+INFO: [HLS 200-10] On os Ubuntu 16.04.6 LTS
+INFO: [HLS 200-10] In directory '/curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm'
+Sourcing Tcl script '/curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/lstm_kernel/solution1/csynth.tcl'
+INFO: [HLS 200-10] Opening project '/curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/lstm_kernel'.
+INFO: [HLS 200-10] Adding design file 'lstm_kernel.c' to the project
+INFO: [HLS 200-10] Adding design file 'lstm_kernel.h' to the project
+INFO: [HLS 200-10] Adding test bench file 'input.txt' to the project
+INFO: [HLS 200-10] Adding test bench file 'lstm_kernel_tb.c' to the project
+INFO: [HLS 200-10] Adding test bench file 'output.txt' to the project
+INFO: [HLS 200-10] Adding test bench file 'weight.txt' to the project
+INFO: [HLS 200-10] Opening solution '/curr/zhechen/workspace/201905_RTCImgProc/1_FPGA/RTCImgProc-Ultra96/hls_kernel/hls_lstm/lstm_kernel/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 2ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 0.25ns.
+INFO: [HLS 200-10] Setting target device to 'xczu3eg-sbva484-1-e'
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty default
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty default
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'lstm_kernel.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:12 ; elapsed = 00:00:18 . Memory (MB): peak = 897.297 ; gain = 198.969 ; free physical = 59247 ; free virtual = 110928
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:12 ; elapsed = 00:00:18 . Memory (MB): peak = 897.297 ; gain = 198.969 ; free physical = 59247 ; free virtual = 110928
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:13 ; elapsed = 00:00:20 . Memory (MB): peak = 897.297 ; gain = 198.969 ; free physical = 59243 ; free virtual = 110925
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:13 ; elapsed = 00:00:20 . Memory (MB): peak = 897.297 ; gain = 198.969 ; free physical = 59243 ; free virtual = 110924
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-6' (lstm_kernel.c:344) in function 'lstm_kernel' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-7.1' (lstm_kernel.c:353) in function 'lstm_kernel' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-8' (lstm_kernel.c:362) in function 'lstm_kernel' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'Loop-4' (lstm_kernel.c:329) in function 'lstm_kernel' completely with a factor of 20.
+INFO: [HLS 200-489] Unrolling loop 'Loop-5' (lstm_kernel.c:334) in function 'lstm_kernel' completely with a factor of 20.
+INFO: [HLS 200-489] Unrolling loop 'Loop-6.1' (lstm_kernel.c:346) in function 'lstm_kernel' completely with a factor of 20.
+INFO: [HLS 200-489] Unrolling loop 'Loop-7.1.1' (lstm_kernel.c:355) in function 'lstm_kernel' completely with a factor of 20.
+INFO: [HLS 200-489] Unrolling loop 'Loop-8.1' (lstm_kernel.c:364) in function 'lstm_kernel' completely with a factor of 20.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:14 ; elapsed = 00:00:21 . Memory (MB): peak = 897.297 ; gain = 198.969 ; free physical = 59222 ; free virtual = 110903
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-5' (lstm_kernel.c:352:11) in function 'lstm_kernel'.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:16 ; elapsed = 00:00:23 . Memory (MB): peak = 897.297 ; gain = 198.969 ; free physical = 59223 ; free virtual = 110905
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'lstm_kernel' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'lstm_kernel' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 4'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('weight_l_load_2', lstm_kernel.c:348) on array 'weight_l' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'weight_l'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 10, Depth = 17.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 5'.
+WARNING: [SCHED 204-68] The II Violation in module 'lstm_kernel' (Loop: Loop 5): Unable to enforce a carried dependence constraint (II = 1, distance = 4, offset = 1)
+   between 'store' operation ('lstm_state_addr_44_write_ln357', lstm_kernel.c:357) of variable 'add_ln357_1', lstm_kernel.c:357 on array 'lstm_state', lstm_kernel.c:297 and 'load' operation ('lstm_state_load_40', lstm_kernel.c:357) on array 'lstm_state', lstm_kernel.c:297.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('weight_l_load_44', lstm_kernel.c:357) on array 'weight_l' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'weight_l'.
+WARNING: [SCHED 204-69] Unable to schedule 'store' operation ('lstm_state_addr_62_write_ln357', lstm_kernel.c:357) of variable 'add_ln357_19', lstm_kernel.c:357 on array 'lstm_state', lstm_kernel.c:297 due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'lstm_state'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 20, Depth = 41.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 6'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('lstm_state_load_22', lstm_kernel.c:366) on array 'lstm_state', lstm_kernel.c:297 due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'lstm_state'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 20, Depth = 20.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 7'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('lstm_state_load_14', lstm_kernel.c:400) on array 'lstm_state', lstm_kernel.c:297 due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'lstm_state'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 18, Depth = 96.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 8'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 7.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 25.3 seconds; current allocated memory: 122.136 MB.
+INFO: [HLS 200-434] Only 5 loops out of a total 9 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 2.78 seconds; current allocated memory: 127.616 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'lstm_kernel' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'lstm_kernel/mode' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lstm_kernel/init' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lstm_kernel/sampleinput' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lstm_kernel/max_v' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lstm_kernel/min_v' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lstm_kernel/weight' to 'bram'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lstm_kernel/lstm_out' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'lstm_kernel' to 'ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lstm_kernel/weight_WEN_A' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lstm_kernel/weight_Din_A' to 0.
+INFO: [RTGEN 206-100] Generating core module 'lstm_kernel_mul_mul_16ns_16s_28_3_1': 20 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'lstm_kernel_mul_mul_16s_16s_28_3_1': 23 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'lstm_kernel_mul_mul_16s_16s_32_3_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'lstm_kernel_udiv_32ns_32ns_16_36_seq_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'lstm_kernel'.
+INFO: [HLS 200-111]  Elapsed time: 2.85 seconds; current allocated memory: 137.577 MB.
+INFO: [RTMG 210-282] Generating pipelined core: 'lstm_kernel_udiv_32ns_32ns_16_36_seq_1_div'
+INFO: [RTMG 210-278] Implementing memory 'lstm_kernel_weight_l_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [RTMG 210-278] Implementing memory 'lstm_kernel_h_state_ram (RAM)' using block RAMs with reset.
+INFO: [RTMG 210-279] Implementing memory 'lstm_kernel_lut_sigmoid_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'lstm_kernel_lut_tanh_rom' using auto ROMs.
+INFO: [RTMG 210-278] Implementing memory 'lstm_kernel_c_state_ram (RAM)' using block RAMs with reset.
+INFO: [RTMG 210-278] Implementing memory 'lstm_kernel_lstm_state_ram (RAM)' using block RAMs.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:27 ; elapsed = 00:00:40 . Memory (MB): peak = 897.297 ; gain = 198.969 ; free physical = 59153 ; free virtual = 110855
+INFO: [VHDL 208-304] Generating VHDL RTL for lstm_kernel.
+INFO: [VLOG 209-307] Generating Verilog RTL for lstm_kernel.
+INFO: [HLS 200-112] Total elapsed time: 40.43 seconds; peak allocated memory: 137.577 MB.

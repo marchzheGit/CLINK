@@ -1,0 +1,115 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling(apcc) ../../../../lstm_kernel_tb.c in debug mode
+INFO: [HLS 200-10] Running 'C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'Zhe' on host 'zhe-hp' (Windows NT_amd64 version 6.2) on Fri Jun 07 21:48:14 -0700 2019
+INFO: [HLS 200-10] In directory 'E:/2018/180314_DC_LSTM/hls_lstm/lstm_kernel/solution1/csim/build'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Generating csim.exe
+[Info] Finish weight loading.
+-13826
+3170
+2711
+-10686
+-5676
+-29595
+-7985
+8391
+-2603
+9633
+187
+12749
+10365
+-9889
+-14529
+-2250
+959
+-16963
+-16534
+15689
+-4144
+-3013
+-4538
+-11779
+-20949
+-22519
+-4767
+-21614
+-2554
+-1738
+4328
+-12382
+-18053
+-9435
+-10201
+10136
+8170
+-8048
+-6991
+-17415
+-13858
+-24213
+-5423
+-19887
+-26783
+-27477
+-9826
+-29030
+-14548
+2370
+-6939
+8247
+185
+-2583
+-11353
+-5689
+-26302
+-10810
+9264
+9925
+-10605
+-4440
+-21093
+4785
+-27398
+-12915
+-12832
+15915
+-3396
+-1335
+3979
+10843
+-7926
+2165
+7198
+-5581
+1028
+-14503
+2348
+-10263
+-1832
+-24715
+-8689
+3
+-11075
+2163
+-3798
+-1123
+9465
+293
+-7808
+10590
+-2988
+10220
+3274
+-11775
+12205
+-21925
+-1785
+-29436
+ *************** 
+   Test Passed!  
+ *************** 
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

@@ -1,0 +1,11 @@
+lstm_kernel_udiv_32ns_32ns_16_36_seq_1
+lstm_kernel_mul_mul_16ns_16s_28_3_1
+lstm_kernel_mul_mul_16s_16s_28_3_1
+lstm_kernel_mul_mul_16s_16s_32_3_1
+lstm_kernel_weight_l
+lstm_kernel_h_state
+lstm_kernel_lut_sigmoid
+lstm_kernel_lut_tanh
+lstm_kernel_c_state
+lstm_kernel_lstm_state
+lstm_kernel

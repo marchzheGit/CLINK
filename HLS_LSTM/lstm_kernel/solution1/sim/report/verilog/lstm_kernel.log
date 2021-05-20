@@ -1,0 +1,31 @@
+INFO: [COSIM-47] Using XSIM for RTL simulation.
+INFO: [COSIM-14] Instrumenting C test bench ...
+   Build using "C:/Xilinx/Vivado/2019.1/msys64/mingw64/bin/g++"
+   Compiling apatb_lstm_kernel.cpp
+   Compiling (apcc) lstm_kernel.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'Zhe' on host 'zhe-hp' (Windows NT_amd64 version 6.2) on Fri Jun 07 17:03:38 -0700 2019
+INFO: [HLS 200-10] In directory 'E:/2018/180314_DC_LSTM/hls_lstm/lstm_kernel/solution1/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) lstm_kernel_tb.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'Zhe' on host 'zhe-hp' (Windows NT_amd64 version 6.2) on Fri Jun 07 17:03:49 -0700 2019
+INFO: [HLS 200-10] In directory 'E:/2018/180314_DC_LSTM/hls_lstm/lstm_kernel/solution1/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+In file included from E:/2018/180314_DC_LSTM/hls_lstm/lstm_kernel_tb.c:1:
+E:/2018/180314_DC_LSTM/hls_lstm/lstm_kernel_tb.c:20:16: warning: format specifies type 'int *' but the argument has type 'int' [-Wformat]
+ fscanf(ifp, "%d", i);
+              ~^   ~
+1 warning generated.
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Generating cosim.tv.exe
+INFO: [COSIM-302] Starting C TB testing ... 
+ERROR: [COSIM-360] Aborting co-simulation: C TB simulation failed.
+ERROR: [COSIM-320] C TB testing failed, stop generating test vectors. Please check C TB or re-run cosim.
+ERROR: [COSIM-5] *** C/RTL co-simulation file generation failed. ***
+ERROR: [COSIM-4] *** C/RTL co-simulation finished: FAIL ***

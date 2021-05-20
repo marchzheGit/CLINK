@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Messages>
+	<Message severity="INFO" prefix="[SCHED 204-61]" key="SCHED_PIPELINING_STATUS_631" tag="SCHEDULE" content="Option &apos;relax_ii_for_timing&apos; is enabled, will increase II to preserve clock frequency constraints."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1312" tag="" content="Analyzing design file &apos;lstm_kernel.c&apos; ..."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Linking Time (s): cpu = 00:00:12 ; elapsed = 00:00:18 . Memory (MB): peak = 897.297 ; gain = 198.969 ; free physical = 59247 ; free virtual = 110928"/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Checking Pragmas Time (s): cpu = 00:00:12 ; elapsed = 00:00:18 . Memory (MB): peak = 897.297 ; gain = 198.969 ; free physical = 59247 ; free virtual = 110928"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1467" tag="" content="Starting code transformations ..."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Standard Transforms Time (s): cpu = 00:00:13 ; elapsed = 00:00:20 . Memory (MB): peak = 897.297 ; gain = 198.969 ; free physical = 59243 ; free virtual = 110925"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1472" tag="" content="Checking synthesizability ..."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Checking Synthesizability Time (s): cpu = 00:00:13 ; elapsed = 00:00:20 . Memory (MB): peak = 897.297 ; gain = 198.969 ; free physical = 59243 ; free virtual = 110924"/>
+	<Message severity="INFO" prefix="[XFORM 203-502]" key="XFORM_AUTO_UNROLL_STATUS_246" tag="" content="Unrolling all sub-loops inside loop &apos;Loop-6&apos; (lstm_kernel.c:344) in function &apos;lstm_kernel&apos; for pipelining."/>
+	<Message severity="INFO" prefix="[XFORM 203-502]" key="XFORM_AUTO_UNROLL_STATUS_246" tag="" content="Unrolling all sub-loops inside loop &apos;Loop-7.1&apos; (lstm_kernel.c:353) in function &apos;lstm_kernel&apos; for pipelining."/>
+	<Message severity="INFO" prefix="[XFORM 203-502]" key="XFORM_AUTO_UNROLL_STATUS_246" tag="" content="Unrolling all sub-loops inside loop &apos;Loop-8&apos; (lstm_kernel.c:362) in function &apos;lstm_kernel&apos; for pipelining."/>
+	<Message severity="INFO" prefix="[HLS 200-489]" key="HLS 200-489" tag="" content="Unrolling loop &apos;Loop-4&apos; (lstm_kernel.c:329) in function &apos;lstm_kernel&apos; completely with a factor of 20."/>
+	<Message severity="INFO" prefix="[HLS 200-489]" key="HLS 200-489" tag="" content="Unrolling loop &apos;Loop-5&apos; (lstm_kernel.c:334) in function &apos;lstm_kernel&apos; completely with a factor of 20."/>
+	<Message severity="INFO" prefix="[HLS 200-489]" key="HLS 200-489" tag="" content="Unrolling loop &apos;Loop-6.1&apos; (lstm_kernel.c:346) in function &apos;lstm_kernel&apos; completely with a factor of 20."/>
+	<Message severity="INFO" prefix="[HLS 200-489]" key="HLS 200-489" tag="" content="Unrolling loop &apos;Loop-7.1.1&apos; (lstm_kernel.c:355) in function &apos;lstm_kernel&apos; completely with a factor of 20."/>
+	<Message severity="INFO" prefix="[HLS 200-489]" key="HLS 200-489" tag="" content="Unrolling loop &apos;Loop-8.1&apos; (lstm_kernel.c:364) in function &apos;lstm_kernel&apos; completely with a factor of 20."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Pre-synthesis Time (s): cpu = 00:00:14 ; elapsed = 00:00:21 . Memory (MB): peak = 897.297 ; gain = 198.969 ; free physical = 59222 ; free virtual = 110903"/>
+	<Message severity="INFO" prefix="[XFORM 203-541]" key="XFORM_LOOPFLAT_STATUS_218" tag="" content="Flattening a loop nest &apos;Loop-5&apos; (lstm_kernel.c:352:11) in function &apos;lstm_kernel&apos;."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Architecture Synthesis Time (s): cpu = 00:00:16 ; elapsed = 00:00:23 . Memory (MB): peak = 897.297 ; gain = 198.969 ; free physical = 59223 ; free virtual = 110905"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1317" tag="" content="Starting hardware synthesis ..."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1385" tag="" content="Synthesizing &apos;lstm_kernel&apos; ..."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1477" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[HLS 200-42]" key="HLS_42_1438" tag="" content="-- Implementing module &apos;lstm_kernel&apos;"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1478" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_597" tag="" content="Starting scheduling ..."/>
+	<Message severity="INFO" prefix="[SCHED 204-61]" key="SCHED_PIPELINING_STATUS_41" tag="" content="Pipelining loop &apos;Loop 4&apos;."/>
+	<Message severity="WARNING" prefix="[SCHED 204-69]" key="SCHED_RESOURCE_CONSTRAINT_NOT_MET_38" tag="SDX_KERNEL,SCHEDULE" content="Unable to schedule &apos;load&apos; operation (&apos;weight_l_load_2&apos;, lstm_kernel.c:348) on array &apos;weight_l&apos; due to limited memory ports. Please consider using a memory core with more ports or partitioning the array &apos;weight_l&apos;."/>
+	<Message severity="INFO" prefix="[SCHED 204-61]" key="SCHED_PIPELINING_STATUS_44" tag="" content="Pipelining result : Target II = 1, Final II = 10, Depth = 17."/>
+	<Message severity="INFO" prefix="[SCHED 204-61]" key="SCHED_PIPELINING_STATUS_41" tag="" content="Pipelining loop &apos;Loop 5&apos;."/>
+	<Message severity="WARNING" prefix="[SCHED 204-68]" key="SCHED_CARRIED_CONSTRAINT_NOT_MET_32" tag="LOOP,SDX_LOOP,SCHEDULE" content="The II Violation in module &apos;lstm_kernel&apos; (Loop: Loop 5): Unable to enforce a carried dependence constraint (II = 1, distance = 4, offset = 1)
+   between &apos;store&apos; operation (&apos;lstm_state_addr_44_write_ln357&apos;, lstm_kernel.c:357) of variable &apos;add_ln357_1&apos;, lstm_kernel.c:357 on array &apos;lstm_state&apos;, lstm_kernel.c:297 and &apos;load&apos; operation (&apos;lstm_state_load_40&apos;, lstm_kernel.c:357) on array &apos;lstm_state&apos;, lstm_kernel.c:297."/>
+	<Message severity="WARNING" prefix="[SCHED 204-69]" key="SCHED_RESOURCE_CONSTRAINT_NOT_MET_38" tag="SDX_KERNEL,SCHEDULE" content="Unable to schedule &apos;load&apos; operation (&apos;weight_l_load_44&apos;, lstm_kernel.c:357) on array &apos;weight_l&apos; due to limited memory ports. Please consider using a memory core with more ports or partitioning the array &apos;weight_l&apos;."/>
+	<Message severity="WARNING" prefix="[SCHED 204-69]" key="SCHED_RESOURCE_CONSTRAINT_NOT_MET_38" tag="SDX_KERNEL,SCHEDULE" content="Unable to schedule &apos;store&apos; operation (&apos;lstm_state_addr_62_write_ln357&apos;, lstm_kernel.c:357) of variable &apos;add_ln357_19&apos;, lstm_kernel.c:357 on array &apos;lstm_state&apos;, lstm_kernel.c:297 due to limited memory ports. Please consider using a memory core with more ports or partitioning the array &apos;lstm_state&apos;."/>
+	<Message severity="INFO" prefix="[SCHED 204-61]" key="SCHED_PIPELINING_STATUS_44" tag="" content="Pipelining result : Target II = 1, Final II = 20, Depth = 41."/>
+	<Message severity="INFO" prefix="[SCHED 204-61]" key="SCHED_PIPELINING_STATUS_41" tag="" content="Pipelining loop &apos;Loop 6&apos;."/>
+	<Message severity="WARNING" prefix="[SCHED 204-69]" key="SCHED_RESOURCE_CONSTRAINT_NOT_MET_38" tag="SDX_KERNEL,SCHEDULE" content="Unable to schedule &apos;load&apos; operation (&apos;lstm_state_load_22&apos;, lstm_kernel.c:366) on array &apos;lstm_state&apos;, lstm_kernel.c:297 due to limited memory ports. Please consider using a memory core with more ports or partitioning the array &apos;lstm_state&apos;."/>
+	<Message severity="INFO" prefix="[SCHED 204-61]" key="SCHED_PIPELINING_STATUS_44" tag="" content="Pipelining result : Target II = 1, Final II = 20, Depth = 20."/>
+	<Message severity="INFO" prefix="[SCHED 204-61]" key="SCHED_PIPELINING_STATUS_41" tag="" content="Pipelining loop &apos;Loop 7&apos;."/>
+	<Message severity="WARNING" prefix="[SCHED 204-69]" key="SCHED_RESOURCE_CONSTRAINT_NOT_MET_38" tag="SDX_KERNEL,SCHEDULE" content="Unable to schedule &apos;load&apos; operation (&apos;lstm_state_load_14&apos;, lstm_kernel.c:400) on array &apos;lstm_state&apos;, lstm_kernel.c:297 due to limited memory ports. Please consider using a memory core with more ports or partitioning the array &apos;lstm_state&apos;."/>
+	<Message severity="INFO" prefix="[SCHED 204-61]" key="SCHED_PIPELINING_STATUS_44" tag="" content="Pipelining result : Target II = 1, Final II = 18, Depth = 96."/>
+	<Message severity="INFO" prefix="[SCHED 204-61]" key="SCHED_PIPELINING_STATUS_41" tag="" content="Pipelining loop &apos;Loop 8&apos;."/>
+	<Message severity="INFO" prefix="[SCHED 204-61]" key="SCHED_PIPELINING_STATUS_44" tag="" content="Pipelining result : Target II = 1, Final II = 1, Depth = 7."/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_596" tag="" content="Finished scheduling."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 25.3 seconds; current allocated memory: 122.136 MB."/>
+	<Message severity="INFO" prefix="[HLS 200-434]" key="HLS 200-434" tag="SDX" content="Only 5 loops out of a total 9 loops have been pipelined in this design."/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_926" tag="" content="Starting micro-architecture generation ..."/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_698" tag="" content="Performing variable lifetime analysis."/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_697" tag="" content="Exploring resource sharing."/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_693" tag="" content="Binding ..."/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_925" tag="" content="Finished micro-architecture generation."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 2.78 seconds; current allocated memory: 127.616 MB."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1483" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1484" tag="" content="-- Generating RTL for module &apos;lstm_kernel&apos;"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1485" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;lstm_kernel/mode&apos; to &apos;ap_none&apos;."/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;lstm_kernel/init&apos; to &apos;ap_none&apos;."/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;lstm_kernel/sampleinput&apos; to &apos;ap_none&apos;."/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;lstm_kernel/max_v&apos; to &apos;ap_none&apos;."/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;lstm_kernel/min_v&apos; to &apos;ap_none&apos;."/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;lstm_kernel/weight&apos; to &apos;bram&apos;."/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;lstm_kernel/lstm_out&apos; to &apos;ap_vld&apos;."/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on function &apos;lstm_kernel&apos; to &apos;ap_ctrl_hs&apos;."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_739" tag="" content="Setting dangling out port &apos;lstm_kernel/weight_WEN_A&apos; to 0."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_739" tag="" content="Setting dangling out port &apos;lstm_kernel/weight_Din_A&apos; to 0."/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_855" tag="" content="Generating core module &apos;lstm_kernel_mul_mul_16ns_16s_28_3_1&apos;: 20 instance(s)."/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_855" tag="" content="Generating core module &apos;lstm_kernel_mul_mul_16s_16s_28_3_1&apos;: 23 instance(s)."/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_855" tag="" content="Generating core module &apos;lstm_kernel_mul_mul_16s_16s_32_3_1&apos;: 1 instance(s)."/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_855" tag="" content="Generating core module &apos;lstm_kernel_udiv_32ns_32ns_16_36_seq_1&apos;: 1 instance(s)."/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_856" tag="" content="Finished creating RTL model for &apos;lstm_kernel&apos;."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 2.85 seconds; current allocated memory: 137.577 MB."/>
+	<Message severity="INFO" prefix="[RTMG 210-282]" key="RTMG_282_1796" tag="" content="Generating pipelined core: &apos;lstm_kernel_udiv_32ns_32ns_16_36_seq_1_div&apos;"/>
+	<Message severity="INFO" prefix="[RTMG 210-278]" key="RTMG_278_1792" tag="" content="Implementing memory &apos;lstm_kernel_weight_l_ram (RAM)&apos; using block RAMs with power-on initialization."/>
+	<Message severity="INFO" prefix="[RTMG 210-278]" key="RTMG_278_1791" tag="" content="Implementing memory &apos;lstm_kernel_h_state_ram (RAM)&apos; using block RAMs with reset."/>
+	<Message severity="INFO" prefix="[RTMG 210-279]" key="RTMG_279_1793" tag="" content="Implementing memory &apos;lstm_kernel_lut_sigmoid_rom&apos; using auto ROMs."/>
+	<Message severity="INFO" prefix="[RTMG 210-279]" key="RTMG_279_1793" tag="" content="Implementing memory &apos;lstm_kernel_lut_tanh_rom&apos; using auto ROMs."/>
+	<Message severity="INFO" prefix="[RTMG 210-278]" key="RTMG_278_1791" tag="" content="Implementing memory &apos;lstm_kernel_c_state_ram (RAM)&apos; using block RAMs with reset."/>
+	<Message severity="INFO" prefix="[RTMG 210-278]" key="RTMG_278_1790" tag="" content="Implementing memory &apos;lstm_kernel_lstm_state_ram (RAM)&apos; using block RAMs."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished generating all RTL models Time (s): cpu = 00:00:27 ; elapsed = 00:00:40 . Memory (MB): peak = 897.297 ; gain = 198.969 ; free physical = 59153 ; free virtual = 110855"/>
+	<Message severity="INFO" prefix="[VHDL 208-304]" key="VHDL_304_1066" tag="" content="Generating VHDL RTL for lstm_kernel."/>
+	<Message severity="INFO" prefix="[VLOG 209-307]" key="VLOG_307_1067" tag="" content="Generating Verilog RTL for lstm_kernel."/>
+</Messages>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'lstm_kernel/weight_Din_A' to 0." projectName="lstm_kernel" solutionName="solution1" date="2019-09-06T17:03:51.172-0700" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'lstm_kernel/weight_WEN_A' to 0." projectName="lstm_kernel" solutionName="solution1" date="2019-09-06T17:03:50.735-0700" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('lstm_state_load_14', lstm_kernel.c:400) on array 'lstm_state', lstm_kernel.c:297 due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'lstm_state'." projectName="lstm_kernel" solutionName="solution1" date="2019-09-06T17:03:45.130-0700" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('lstm_state_load_22', lstm_kernel.c:366) on array 'lstm_state', lstm_kernel.c:297 due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'lstm_state'." projectName="lstm_kernel" solutionName="solution1" date="2019-09-06T17:03:44.832-0700" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-69] Unable to schedule 'store' operation ('lstm_state_addr_62_write_ln357', lstm_kernel.c:357) of variable 'add_ln357_19', lstm_kernel.c:357 on array 'lstm_state', lstm_kernel.c:297 due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'lstm_state'." projectName="lstm_kernel" solutionName="solution1" date="2019-09-06T17:03:44.528-0700" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('weight_l_load_44', lstm_kernel.c:357) on array 'weight_l' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'weight_l'." projectName="lstm_kernel" solutionName="solution1" date="2019-09-06T17:03:44.402-0700" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-68] The II Violation in module 'lstm_kernel' (Loop: Loop 5): Unable to enforce a carried dependence constraint (II = 1, distance = 4, offset = 1)&#xA;   between 'store' operation ('lstm_state_addr_44_write_ln357', lstm_kernel.c:357) of variable 'add_ln357_1', lstm_kernel.c:357 on array 'lstm_state', lstm_kernel.c:297 and 'load' operation ('lstm_state_load_40', lstm_kernel.c:357) on array 'lstm_state', lstm_kernel.c:297." projectName="lstm_kernel" solutionName="solution1" date="2019-09-06T17:03:44.263-0700" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('weight_l_load_2', lstm_kernel.c:348) on array 'weight_l' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'weight_l'." projectName="lstm_kernel" solutionName="solution1" date="2019-09-06T17:03:44.200-0700" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>
